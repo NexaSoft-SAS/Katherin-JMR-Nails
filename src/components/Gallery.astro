@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+
+// Import all images
+import nailDesign1 from '../assets/photos/nail-design-1.jpeg';
+import nailDesign2 from '../assets/photos/nail-design-2.jpeg';
+import nailDesign3 from '../assets/photos/nail-design-3.jpeg';
+import nailDesign4 from '../assets/photos/nail-design-4.jpeg';
+import nailDesign5 from '../assets/photos/nail-design-5.jpeg';
+import nailDesign6 from '../assets/photos/nail-design-6.jpeg';
+import nailDesign7 from '../assets/photos/nail-design-7.jpeg';
+import nailDesign8 from '../assets/photos/nail-design-8.jpeg';
+import nailDesign9 from '../assets/photos/nail-design-9.jpeg';
+import nailDesign10 from '../assets/photos/nail-design-10.jpeg';
+import nailDesign11 from '../assets/photos/nail-design-11.jpeg';
+import nailDesign12 from '../assets/photos/nail-design-12.jpeg';
+
+const galleryItems = [
+  { image: nailDesign1, alt: "Diseño de uñas profesional 1", category: "Acrílicas" },
+  { image: nailDesign2, alt: "Diseño de uñas profesional 2", category: "Gel" },
+  { image: nailDesign3, alt: "Diseño de uñas profesional 3", category: "Semipermanente" },
+  { image: nailDesign4, alt: "Diseño de uñas profesional 4", category: "Acrílicas" },
+  { image: nailDesign5, alt: "Diseño de uñas profesional 5", category: "Gel" },
+  { image: nailDesign6, alt: "Diseño de uñas profesional 6", category: "Acrílicas" },
+  { image: nailDesign7, alt: "Diseño de uñas profesional 7", category: "Semipermanente" },
+  { image: nailDesign8, alt: "Diseño de uñas profesional 8", category: "Gel" },
+  { image: nailDesign9, alt: "Diseño de uñas profesional 9", category: "Acrílicas" },
+  { image: nailDesign10, alt: "Diseño de uñas profesional 10", category: "Gel" },
+  { image: nailDesign11, alt: "Diseño de uñas profesional 11", category: "Semipermanente" },
+  { image: nailDesign12, alt: "Diseño de uñas profesional 12", category: "Permanente" },
+];
+---
+
+<section id="galeria" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center scroll-animate">
+      <span class="inline-block px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-medium mb-4">
+        Mi Trabajo
+      </span>
+      <h2 class="section-title">
+        Galería de <span class="gradient-text">Diseños</span>
+      </h2>
+      <p class="section-subtitle">
+        Una muestra de los trabajos realizados. Cada diseño es único y 
+        personalizado según los gustos de cada clienta.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {galleryItems.map((item, index) => (
+        <div 
+          class="scroll-animate group relative aspect-square rounded-xl overflow-hidden cursor-pointer shadow-md"
+          style={`animation-delay: ${index * 0.05}s`}
+        >
+          <Image 
+            src={item.image} 
+            alt={item.alt}
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading={index < 4 ? "eager" : "lazy"}
+          />
+          
+          <!-- Overlay with zoom icon on hover -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+            <span class="text-white text-sm font-medium px-3 py-1 bg-white/20 rounded-full backdrop-blur-sm">
+              {item.category}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-10 scroll-animate">
+      <p class="text-gray-500 text-sm mb-4">
+        ¿Te gustó algún diseño? Puedo recrearlo o crear uno personalizado para ti.
+      </p>
+      <a 
+        href="https://wa.me/573052348801?text=Hola%20Katherin,%20vi%20tu%20galería%20y%20me%20gustaría%20un%20diseño%20similar"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-secondary inline-flex items-center gap-2"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Pedir Diseño Personalizado
+      </a>
+    </div>
+  </div>
+</section>

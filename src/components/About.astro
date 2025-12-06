@@ -1,0 +1,160 @@
+---
+const certifications = [
+    {
+        title: "Técnica en Manicure Profesional",
+        institution: "Academia de Belleza",
+        year: "2022",
+    },
+    {
+        title: "Especialización en Uñas Acrílicas",
+        institution: "Instituto de Estética",
+        year: "2023",
+    },
+    {
+        title: "Nail Art y Diseño Avanzado",
+        institution: "Escuela Internacional",
+        year: "2023",
+    },
+];
+
+const stats = [
+    { value: "500+", label: "Clientas Felices" },
+    { value: "3+", label: "Años de Experiencia" },
+    { value: "1000+", label: "Diseños Creados" },
+    { value: "100%", label: "Satisfacción" },
+];
+---
+
+<section id="sobre-mi" class="section bg-gradient-to-b from-pink-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Image/Visual Side -->
+            <div class="scroll-animate order-2 lg:order-1">
+                <div class="relative">
+                    <div
+                        class="aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden shadow-xl"
+                    >
+                        <!-- Placeholder for profile image -->
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-pink-200 via-purple-200 to-pink-300 flex items-center justify-center"
+                        >
+                            <div class="text-center p-8">
+                                <div
+                                    class="w-32 h-32 mx-auto mb-6 rounded-full bg-white/60 flex items-center justify-center shadow-lg"
+                                >
+                                    <span class="text-5xl">👩‍🎨</span>
+                                </div>
+                                <p class="text-pink-700 font-semibold text-lg">
+                                    Katherin Julieth
+                                </p>
+                                <p class="text-pink-600 text-sm">Mesa Reyes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -bottom-6 -right-6 lg:-right-10 bg-white rounded-xl shadow-lg p-4 animate-float"
+                    >
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-12 h-12 rounded-full gradient-pink-lila flex items-center justify-center text-white text-xl"
+                            >
+                                🏆
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">
+                                    Certificada
+                                </p>
+                                <p class="text-xs text-gray-500">Profesional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Side -->
+            <div
+                class="order-1 lg:order-2 scroll-animate"
+                style="animation-delay: 0.2s;"
+            >
+                <span
+                    class="inline-block px-4 py-2 bg-purple-100 text-purple-600 rounded-full text-sm font-medium mb-4"
+                >
+                    Sobre Mí
+                </span>
+
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+                    Hola, soy <span class="gradient-text">Katherin Julieth</span
+                    >
+                </h2>
+
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Soy una apasionada del arte en uñas con más de 3 años de
+                    experiencia transformando las manos de mis clientas. Mi
+                    objetivo es hacer que cada una se sienta especial y segura
+                    con uñas hermosas y duraderas.
+                </p>
+
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Me especializo en técnicas modernas como acrílicas, gel y
+                    semipermanentes, siempre usando productos de alta calidad
+                    para garantizar resultados excepcionales. Ofrezco servicio a
+                    domicilio en Bogotá y Soacha para tu comodidad.
+                </p>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                    {
+                        stats.map((stat) => (
+                            <div class="text-center p-3 rounded-lg bg-white shadow-sm">
+                                <p class="text-2xl font-bold gradient-text">
+                                    {stat.value}
+                                </p>
+                                <p class="text-xs text-gray-500">
+                                    {stat.label}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3
+                        class="font-semibold text-gray-800 mb-4 flex items-center gap-2"
+                    >
+                        <svg
+                            class="w-5 h-5 text-pink-500"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"
+                            ></path>
+                        </svg>
+                        Certificaciones
+                    </h3>
+
+                    <div class="space-y-3">
+                        {
+                            certifications.map((cert) => (
+                                <div class="flex items-start gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-pink-400 mt-2 flex-shrink-0" />
+                                    <div>
+                                        <p class="font-medium text-gray-700 text-sm">
+                                            {cert.title}
+                                        </p>
+                                        <p class="text-xs text-gray-500">
+                                            {cert.institution} • {cert.year}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
