@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
-
 /* Custom CSS Variables */
 @theme {
   /* Pink/Lila Color Palette */
@@ -13,7 +10,7 @@
   --color-primary-400: #f472b6;
   --color-primary-500: #ec4899;
   --color-primary-600: #db2777;
-  
+
   --color-secondary-50: #f5f3ff;
   --color-secondary-100: #ede9fe;
   --color-secondary-200: #ddd6fe;
@@ -21,14 +18,14 @@
   --color-secondary-400: #a78bfa;
   --color-secondary-500: #8b5cf6;
   --color-secondary-600: #7c3aed;
-  
+
   --color-accent-400: #c084fc;
   --color-accent-500: #a855f7;
-  
+
   /* Typography */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Roboto", sans-serif;
-  
+
   /* Spacing */
   --spacing-section: 5rem;
 }
@@ -45,7 +42,12 @@ body {
   line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   color: #1f2937;
@@ -57,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -67,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -77,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -88,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -95,18 +101,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
